@@ -1,26 +1,128 @@
+/* src/app/globals.css */
 @import "tailwindcss";
 
+/* ====================== */
+/*   COULEURS PERSONNALISÉES   */
+/* ====================== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #2563eb;
+  --color-primary-100: #dbeafe;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-900: #1e3a8a;
+  --color-success: #16a34a;
+  --color-success-600: #16a34a;
+  --color-background: #eff6ff;
+  --color-border: #e5e7eb;
+  --radius: 1rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ====================== */
+/*   BASE MOBILE-FIRST    */
+/* ====================== */
+*, *::before, *::after {
+  border-color: var(--color-border);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom right, var(--color-background), #ffffff, var(--color-primary-100));
+  color: var(--color-primary-900);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.625;
+  overflow-x: hidden;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ====================== */
+/*   UTILITAIRES PRO      */
+/* ====================== */
+.bg-gradient-africa {
+  background-image: linear-gradient(to bottom right, var(--color-background), var(--color-primary-100));
+}
+
+.card-main {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+  border: 1px solid rgba(59,130,246,0.5);
+  padding: 1.5rem;
+}
+
+.btn-primary {
+  min-height: 3.5rem;
+  padding: 1rem 2rem;
+  background-color: var(--color-primary-600);
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+  transition: all 150ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 1.125rem;
+}
+.btn-primary:hover { background-color: var(--color-primary-700); }
+.btn-primary:active { transform: scale(0.95); }
+
+.btn-success {
+  min-height: 3.5rem;
+  padding: 1rem 2rem;
+  background-color: var(--color-success-600);
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+  transition: all 150ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 1.125rem;
+}
+.btn-success:hover { background-color: var(--color-success); }
+.btn-success:active { transform: scale(0.95); }
+
+.input-mobile {
+  width: 100%;
+  height: 3.5rem;
+  padding: 0 1.25rem;
+  font-size: 1.125rem;
+  border-radius: 1rem;
+  border: 2px solid #d1d5db;
+  transition: all 150ms ease;
+}
+.input-mobile:focus { border-color: var(--color-primary-600); box-shadow: 0 0 0 4px var(--color-primary-100); outline: none; }
+
+.hero-title {
+  text-align: center;
+  font-weight: 900;
+  line-height: 1.25;
+  font-size: 2.25rem;
+}
+@media (min-width: 768px) { .hero-title { font-size: 3rem; } }
+@media (min-width: 1024px) { .hero-title { font-size: 3.75rem; } }
+
+.badge-demo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #dcfce7;
+  color: #166534;
+  font-weight: 700;
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+/* ====================== */
+/*   RESPONSIVE SIMPLE    */
+/* ====================== */
+.container-mobile { width: 100%; max-width: 28rem; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem; }
+@media (min-width: 768px) { .container-mobile { max-width: 32rem; } }
