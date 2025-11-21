@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CRM Afrique – MVP Démo 100 % fonctionnelle
 
-## Getting Started
+Site live : https://crm-afrique-demo.vercel.app  
+Mini-site exemple : https://crm-afrique-demo.vercel.app/mini-site/salon-bella-coiffure
 
-First, run the development server:
+## Ce que vous avez devant les yeux
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Une **application complète** que je suis en train de développer pour les TPE africaines (salons de coiffure, boutiques, restaurants, etc.).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Fonctionnalités déjà prêtes
+- Connexion par SMS (Côte d’Ivoire + tout autre pays)  
+- Dashboard avec CA du mois & nombre de clients  
+- Actions rapides (nouveau client, vente, WhatsApp)  
+- Mini-site public offert (votre-site.afrique.pro)  
+- PWA installable → fonctionne comme une vraie app (même hors ligne)  
+- 100 % responsive (téléphone, tablette, ordinateur)  
+- Design test bleu/blanc 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Démo instantanée (aucune configuration)
+1. Ouvrez le lien sur votre téléphone  
+2. Numéro : `07 12 34 56 78` (déjà rempli)  
+3. Code OTP : tapez `111111` (ou n’importe quel code à 6 chiffres)  
+→ Vous arrivez directement sur le dashboard + mini-site généré automatiquement
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Stack technique (2025)
+- Next.js 16 + App Router + Turbopack  
+- Tailwind CSS v4 (design system intégré)  
+- Supabase (auth + base de données)  
+- PWA installable (@ducanh2912/next-pwa)  
+- Shadcn/ui + Lucide icons  
+- Déploiement instantané sur Vercel
 
-## Learn More
+### Prix ferme & délai
+- **4 200 € HT**  
+- Livré en **4 semaines maximum**  
+- Paiement échelonné : 35 % / 35 % / 30 %
 
-To learn more about Next.js, take a look at the following resources:
+### Contact immédiat
+**Alexandre**  
+mail: alexecormier@gmail.com
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+> Ce n’est pas une maquette. C’est une vraie application qui tourne déjà.  
+> Testez-la maintenant, vous allez adorer.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Projet développé en live pour vous – rien n’est caché, tout est déjà prêt.*
