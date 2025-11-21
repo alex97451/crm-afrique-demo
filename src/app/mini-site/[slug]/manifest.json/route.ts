@@ -1,8 +1,8 @@
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import { supabaseServer } from '@/lib/supabase-server'
 
-export async function GET(_: Request, { params }: { params: { slug: string } }) {
-  const { slug } = params
+export async function GET(_: NextRequest, { params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
   const { data: business } = await supabaseServer()
     .from('businesses')
     .select('name, location')
