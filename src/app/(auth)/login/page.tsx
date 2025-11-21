@@ -111,13 +111,13 @@ export default function Login() {
               <p className="text-3xl font-black text-white">4 200 € HT</p>
               <p className="text-lg text-white/90">Livré en 4 semaines • Paiement échelonné</p>
               
-              <Button asChild className="w-full h-14 bg-green-500 hover:bg-green-400 font-bold rounded-2xl">
+              <Button asChild className="w-full min-h-14 bg-green-500 hover:bg-green-400 font-bold rounded-2xl whitespace-normal flex-wrap">
                 <a
                   href="https://wa.me/33751231081"
                   target="_blank"
-                  className="flex w-full h-full items-center justify-center gap-2 px-3 text-base sm:text-xl whitespace-nowrap"
+                  className="flex flex-col sm:flex-row w-full h-full items-center justify-center gap-1 sm:gap-2 px-3 py-2 text-sm sm:text-xl leading-tight text-center whitespace-normal break-words text-white"
                 >
-                  <MessageCircle className="w-6 h-6 sm:w-8 sm:h-8 mr-2 sm:mr-3" />
+                  <MessageCircle className="w-6 h-6 sm:w-8 sm:h-8 mb-1 sm:mb-0 sm:mr-3" />
                   Alexandre – WhatsApp (réponse immédiate)
                 </a>
               </Button>
