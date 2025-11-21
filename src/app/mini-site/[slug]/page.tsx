@@ -104,3 +104,28 @@ export default async function MiniSite({ params }: { params: Promise<{ slug: str
     </div>
   )
 }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const { data: business } = await supabaseServer()
+    .from('businesses')
+    .select('name, location')
+    .eq('slug', slug)
+    .single()
+  const title = business?.name || 'Site'
+  const description = business ? `${business.name} – ${business.location}` : 'Site'
+  return {
+    title,
+    description,
+    manifest: `/mini-site/${slug}/manifest.json`,
+    themeColor: '#2563eb',
+    icons: {
+      icon: '/icon-192.png',
+      apple: '/icon-192.png',
+    },
+    appleWebApp: {
+      title,
+      statusBarStyle: 'black-translucent',
+      capable: true,
+    },
+  }
+}

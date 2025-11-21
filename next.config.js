@@ -6,9 +6,23 @@ const withPWA = nextPWA({
   disable: process.env.NODE_ENV === 'development',
   register: true,
   skipWaiting: true,
-  fallbacks: {
-    webpack: (config) => config,
-  },
+  runtimeCaching: [
+    {
+      urlPattern: /^https?:.*\/mini-site\/.*$/,
+      handler: 'StaleWhileRevalidate',
+      options: { cacheName: 'mini-site-pages' },
+    },
+    {
+      urlPattern: /^https?:\/\/[^/]+\/_next\/static\/.*$/,
+      handler: 'CacheFirst',
+      options: { cacheName: 'static-assets' },
+    },
+    {
+      urlPattern: /^https?:\/\/[^/]+\/icons\/.*$/,
+      handler: 'CacheFirst',
+      options: { cacheName: 'icons' },
+    },
+  ],
 });
 
 const nextConfig = {
